@@ -126,7 +126,7 @@
 
 .sig-drag-hint {
   position: absolute;
-  bottom: 64px;
+  bottom: 18px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(15, 38, 68, 0.8);
@@ -141,90 +141,6 @@
   gap: 6px;
   pointer-events: none;
   z-index: 10;
-}
-
-/* Side by Side view mode */
-.sig-side-by-side {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  height: 100%;
-  min-height: 400px;
-  gap: 2px;
-  background-color: var(--color-navy);
-}
-
-@media (min-width: 1024px) {
-  .sig-side-by-side {
-    min-height: 520px;
-  }
-}
-
-.sig-side-panel {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* View Switcher Controls */
-.sig-view-toggle {
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  background-color: rgba(15, 38, 68, 0.85);
-  backdrop-filter: blur(8px);
-  padding: 3px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  z-index: 20;
-}
-
-.sig-mode-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  background: none;
-  border: none;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.6875rem;
-  font-weight: 700;
-  padding: 5px 12px;
-  border-radius: var(--radius-full);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.sig-mode-btn.is-active {
-  background-color: var(--color-accent);
-  color: #FFFFFF;
-}
-
-/* Doctor attribution badge */
-.signature-badge {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background-color: rgba(15, 38, 68, 0.88);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #FFFFFF;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 8px 14px;
-  border-radius: var(--radius-md);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  z-index: 10;
-  text-align: center;
-}
-
-.sparkle-gold {
-  color: var(--color-accent);
 }
 
 /* Content */

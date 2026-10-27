@@ -89,29 +89,6 @@ export default function Reviews() {
               <span className="rating-count">Over 795+ Verified Patient Reviews</span>
             </div>
           </div>
-
-          {/* Carousel Arrows */}
-          <div className="reviews-controls">
-            <button
-              type="button"
-              className="carousel-control-btn"
-              onClick={prevReview}
-              aria-label="Previous review"
-            >
-              <ChevronLeft size={20} />
-            </button>
-            <span className="carousel-counter">
-              {currentIndex + 1} / {totalReviews}
-            </span>
-            <button
-              type="button"
-              className="carousel-control-btn"
-              onClick={nextReview}
-              aria-label="Next review"
-            >
-              <ChevronRight size={20} />
-            </button>
-          </div>
         </div>
 
         {/* Carousel Track with Auto-Slide & Hover Pause */}
@@ -186,7 +163,7 @@ export default function Reviews() {
           ))}
         </div>
 
-        {/* Action Row: Read All Reviews & External Google/Yelp Links */}
+        {/* Action Row: Read All Verified Reviews Only */}
         <div className="reviews-bottom-action">
           <button
             type="button"
@@ -196,28 +173,6 @@ export default function Reviews() {
             <MessageSquare size={16} />
             <span>Read All Verified Reviews ({REVIEWS.length})</span>
           </button>
-          
-          <div className="reviews-links-group">
-            <a
-              href={PRACTICE_INFO.socials.google}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="reviews-external-link"
-            >
-              <span>View Google Profile</span>
-              <ExternalLink size={14} />
-            </a>
-            <span className="link-divider">·</span>
-            <a
-              href={PRACTICE_INFO.socials.yelp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="reviews-external-link"
-            >
-              <span>View Yelp Profile</span>
-              <ExternalLink size={14} />
-            </a>
-          </div>
         </div>
       </div>
 

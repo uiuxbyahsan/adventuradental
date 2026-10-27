@@ -4,6 +4,11 @@
   position: relative;
 }
 
+.ba-gallery-section .container {
+  max-width: 1440px;
+  width: 100%;
+}
+
 /* Controls Bar */
 .ba-controls-bar {
   display: flex;

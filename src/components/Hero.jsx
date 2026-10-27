@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Star, ChevronLeft, ChevronRight, ShieldCheck, Sparkles, Clock, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Star, ShieldCheck, Sparkles } from 'lucide-react';
 import { PRACTICE_INFO } from '../data/practiceData';
 import './Hero.css';
 
@@ -138,13 +138,6 @@ export default function Hero({ onOpenBooking }) {
                 <span className="trust-dot">·</span>
                 <span className="trust-count">Over 795+ Patient Reviews</span>
               </div>
-              <div className="trust-sub-row">
-                <span>Aventura, Florida</span>
-                <span className="trust-dot">·</span>
-                <span>Biscayne Boulevard</span>
-                <span className="trust-dot">·</span>
-                <span className="highlight-pill">Accepting New Patients</span>
-              </div>
             </div>
           </div>
 
@@ -174,17 +167,8 @@ export default function Hero({ onOpenBooking }) {
                 </div>
               ))}
 
-              {/* Slider Controls */}
+              {/* Slider Dots Animation */}
               <div className="slider-controls">
-                <button 
-                  type="button" 
-                  className="slider-nav-btn prev-btn" 
-                  onClick={handlePrev}
-                  aria-label="Previous slide"
-                >
-                  <ChevronLeft size={20} />
-                </button>
-
                 <div className="slider-indicators">
                   {HERO_SLIDES.map((slide, index) => (
                     <button
@@ -198,15 +182,6 @@ export default function Hero({ onOpenBooking }) {
                     </button>
                   ))}
                 </div>
-
-                <button 
-                  type="button" 
-                  className="slider-nav-btn next-btn" 
-                  onClick={handleNext}
-                  aria-label="Next slide"
-                >
-                  <ChevronRight size={20} />
-                </button>
               </div>
             </div>
 

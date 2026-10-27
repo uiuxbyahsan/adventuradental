@@ -101,8 +101,19 @@ export default function Gallery({ onOpenBooking }) {
   const [startX, setStartX] = useState(0);
   const [dragOffset, setDragOffset] = useState(0);
 
+  const [isPaused, setIsPaused] = useState(false);
+
   const sliderRef = useRef(null);
   const totalCases = PORTFOLIO_CASES.length;
+
+  // Auto-advance gallery cases every 5 seconds
+  useEffect(() => {
+    if (isPaused || isDragging || activeLightboxIndex !== null) return;
+    const timer = setInterval(() => {
+      setCurrentSlideIndex((prev) => (prev + 1) % totalCases);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [isPaused, isDragging, activeLightboxIndex, totalCases]);
 
   const nextSlide = () => {
     setCurrentSlideIndex((prev) => (prev + 1) % totalCases);
@@ -183,47 +194,17 @@ export default function Gallery({ onOpenBooking }) {
           <p className="section-subtitle">
             Swipe through real patient cases completed by our clinical team at Aventura Dental Group.
           </p>
-
-          {/* Mobile/Tablet Swipe Hint & Desktop Navigation Controls */}
-          <div className="gallery-slider-controls">
-            <span className="swipe-instruction-pill">
-              <span>Swipe left or right to explore</span>
-            </span>
-
-            <div className="slider-nav-arrows">
-              <button
-                type="button"
-                className="gallery-arrow-btn"
-                onClick={prevSlide}
-                aria-label="Previous portfolio case"
-              >
-                <ChevronLeft size={20} />
-              </button>
-
-              <span className="gallery-slide-counter">
-                {currentSlideIndex + 1} / {totalCases}
-              </span>
-
-              <button
-                type="button"
-                className="gallery-arrow-btn"
-                onClick={nextSlide}
-                aria-label="Next portfolio case"
-              >
-                <ChevronRight size={20} />
-              </button>
-            </div>
-          </div>
         </div>
 
-        {/* Mobile & Tablet Touch Slider Track */}
+        {/* Large Cinematic Portfolio Slider with Dot Animation */}
         <div
           ref={sliderRef}
           className="portfolio-slider-wrapper"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => { setIsPaused(false); if (isDragging) handleTouchEnd(); }}
           onMouseDown={handleTouchStart}
           onMouseMove={handleTouchMove}
           onMouseUp={handleTouchEnd}
-          onMouseLeave={handleTouchEnd}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}

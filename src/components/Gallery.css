@@ -5,6 +5,11 @@
   overflow: hidden;
 }
 
+.gallery-section .container {
+  max-width: 1440px;
+  width: 100%;
+}
+
 /* Controls Bar */
 .gallery-slider-controls {
   display: flex;
@@ -68,11 +73,11 @@
   text-align: center;
 }
 
-/* Mobile & Tablet Portfolio Touch Slider */
+/* Large Portfolio Touch/Drag Slider */
 .portfolio-slider-wrapper {
   position: relative;
   width: 100%;
-  max-width: 860px;
+  max-width: 1360px;
   margin: 36px auto 0;
   overflow: hidden;
   user-select: none;
@@ -120,6 +125,12 @@
   aspect-ratio: 16 / 10;
   overflow: hidden;
   background-color: var(--color-navy);
+}
+
+@media (min-width: 900px) {
+  .portfolio-card-media {
+    aspect-ratio: 21 / 9;
+  }
 }
 
 .portfolio-card-img {
