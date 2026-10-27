@@ -1,0 +1,225 @@
+/* Office Section */
+.office-section {
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.office-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+@media (min-width: 992px) {
+  .office-grid {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 48px;
+  }
+}
+
+.office-info-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+  .office-info-card {
+    padding: 48px 40px;
+  }
+}
+
+.office-brand-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.brand-name {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  letter-spacing: -0.02em;
+}
+
+.suite-tag {
+  background-color: var(--color-accent-soft);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+}
+
+.office-detail-blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.office-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.office-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.detail-title {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-accent);
+  margin-bottom: 4px;
+}
+
+.detail-value {
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+}
+
+.detail-value-link {
+  font-size: 1.125rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1.3;
+}
+
+.detail-value-link:hover {
+  color: var(--color-accent);
+}
+
+.detail-sub {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.hours-table {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  font-weight: 600;
+}
+
+.hours-row.is-closed {
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.office-amenities-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 20px 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+  margin: 28px 0;
+}
+
+.amenity-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.office-actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+/* Map Card */
+.office-map-card {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-md);
+  min-height: 380px;
+  background-color: var(--color-bg);
+}
+
+.map-frame-wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  filter: saturate(0.85) contrast(1.05);
+}
+
+.map-overlay-badge {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.map-pin-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.map-badge-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.map-badge-text strong {
+  font-size: 0.875rem;
+  color: var(--color-navy);
+  line-height: 1.2;
+}
+
+.map-badge-text span {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+}

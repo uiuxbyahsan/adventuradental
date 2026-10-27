@@ -1,0 +1,292 @@
+/* Signature Treatment Section */
+.signature-section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+  background-color: var(--color-bg);
+}
+
+.signature-card {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #061F38 100%);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -15px rgba(15, 38, 68, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .signature-grid {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+/* Media Wrap with Interactive Slider */
+.signature-media-wrap {
+  position: relative;
+  min-height: 400px;
+  background-color: var(--color-navy);
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .signature-media-wrap {
+    min-height: 520px;
+  }
+}
+
+.sig-slider-box {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  overflow: hidden;
+  user-select: none;
+  cursor: ew-resize;
+}
+
+@media (min-width: 1024px) {
+  .sig-slider-box {
+    min-height: 520px;
+  }
+}
+
+.sig-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sig-comp-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.sig-badge {
+  position: absolute;
+  top: 16px;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  z-index: 10;
+}
+
+.sig-badge.before-badge {
+  left: 16px;
+  background-color: rgba(15, 38, 68, 0.88);
+  color: #FFFFFF;
+}
+
+.sig-badge.after-badge {
+  right: 16px;
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+.sig-divider-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 15;
+}
+
+.sig-handle-pill {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  border: 1px solid var(--color-border);
+}
+
+.sig-drag-hint {
+  position: absolute;
+  bottom: 64px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(15, 38, 68, 0.8);
+  backdrop-filter: blur(6px);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Side by Side view mode */
+.sig-side-by-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  gap: 2px;
+  background-color: var(--color-navy);
+}
+
+@media (min-width: 1024px) {
+  .sig-side-by-side {
+    min-height: 520px;
+  }
+}
+
+.sig-side-panel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* View Switcher Controls */
+.sig-view-toggle {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  background-color: rgba(15, 38, 68, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 3px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  z-index: 20;
+}
+
+.sig-mode-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.sig-mode-btn.is-active {
+  background-color: var(--color-accent);
+  color: #FFFFFF;
+}
+
+/* Doctor attribution badge */
+.signature-badge {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  right: 16px;
+  background-color: rgba(15, 38, 68, 0.88);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  z-index: 10;
+  text-align: center;
+}
+
+.sparkle-gold {
+  color: var(--color-accent);
+}
+
+/* Content */
+.signature-content {
+  padding: 44px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+@media (min-width: 1024px) {
+  .signature-content {
+    padding: 60px 52px;
+  }
+}
+
+.signature-title {
+  font-size: clamp(2.2rem, 3.5vw, 3.25rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin-bottom: 18px;
+  color: #FFFFFF;
+}
+
+.signature-title .italic {
+  font-style: italic;
+  font-family: var(--font-serif);
+  color: var(--color-accent);
+}
+
+.signature-description {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 28px;
+}
+
+.signature-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 36px;
+}
+
+.highlight-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.highlight-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.signature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}

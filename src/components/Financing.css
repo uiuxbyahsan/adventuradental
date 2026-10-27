@@ -1,0 +1,276 @@
+/* Financing Section */
+.financing-section {
+  background-color: var(--color-bg);
+  position: relative;
+}
+
+.financing-feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+@media (min-width: 900px) {
+  .financing-feature-grid {
+    grid-template-columns: 1.15fr 1fr;
+    gap: 40px;
+  }
+}
+
+/* Card 1: CareCredit Card */
+.carecredit-featured-card {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F0F6FD 100%);
+  border: 1px solid rgba(36, 91, 158, 0.25);
+  border-radius: var(--radius-xl);
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .carecredit-featured-card {
+    padding: 52px 48px;
+  }
+}
+
+.carecredit-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.carecredit-logo-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.carecredit-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  letter-spacing: -0.02em;
+}
+
+.carecredit-tag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.apr-pill {
+  background-color: rgba(41, 151, 216, 0.15);
+  color: var(--color-primary);
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+}
+
+.card-headline {
+  font-size: 1.625rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+
+.card-subtext {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 24px;
+}
+
+.carecredit-perks-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+  padding: 16px 0;
+  border-top: 1px solid var(--color-border-light);
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.carecredit-perks-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  line-height: 1.45;
+}
+
+.perk-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.carecredit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.apply-now-btn {
+  background-color: var(--color-primary);
+  box-shadow: 0 4px 14px rgba(36, 91, 158, 0.3);
+}
+
+.apply-now-btn:hover {
+  background-color: var(--color-primary-hover);
+}
+
+/* Card 2: Uninsured Card */
+.uninsured-featured-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+}
+
+@media (min-width: 768px) {
+  .uninsured-featured-card {
+    padding: 52px 48px;
+  }
+}
+
+.uninsured-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.transparency-pill {
+  background-color: rgba(36, 91, 158, 0.08);
+  color: var(--color-navy);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: var(--radius-full);
+}
+
+.uninsured-points {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.u-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.u-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.u-point strong {
+  display: block;
+  font-size: 0.875rem;
+  color: var(--color-text-primary);
+  margin-bottom: 2px;
+}
+
+.u-point p {
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: var(--color-text-secondary);
+}
+
+.uninsured-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Modal */
+.financing-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(15, 38, 68, 0.75);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: fadeIn 200ms ease;
+}
+
+.financing-modal-card {
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: var(--radius-xl);
+  max-width: 640px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 40px 36px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  animation: scaleUp 250ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.apply-steps-box {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.apply-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px 18px;
+}
+
+.step-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-size: 0.8125rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.apply-step strong {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.apply-step p {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: var(--color-text-secondary);
+}

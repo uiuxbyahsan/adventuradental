@@ -1,0 +1,70 @@
+/* Mobile Fixed Bottom Action Bar */
+.mobile-action-bar {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(11, 83, 104, 0.14);
+  padding: 10px 16px;
+  padding-bottom: max(10px, env(safe-area-inset-bottom));
+  z-index: 990;
+  box-shadow: 0 -4px 20px rgba(8, 47, 61, 0.08);
+}
+
+@media (min-width: 768px) {
+  .mobile-action-bar {
+    display: none !important;
+  }
+}
+
+.mobile-bar-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.mobile-bar-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-call {
+  flex: 0 0 35%;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+}
+
+.btn-call:active {
+  background-color: var(--color-accent-soft);
+  transform: scale(0.98);
+}
+
+.btn-book {
+  flex: 1;
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(11, 83, 104, 0.25);
+}
+
+.btn-book:active {
+  background-color: var(--color-primary-hover);
+  transform: scale(0.98);
+}

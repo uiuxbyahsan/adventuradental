@@ -1,0 +1,127 @@
+/* Final CTA Section */
+.final-cta-section {
+  background-color: var(--color-bg);
+  padding-bottom: 96px;
+}
+
+.final-cta-card {
+  background: linear-gradient(135deg, var(--color-navy) 0%, #06232D 100%);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 24px 60px -12px rgba(8, 47, 61, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.final-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: stretch;
+}
+
+@media (min-width: 992px) {
+  .final-cta-grid {
+    grid-template-columns: 1.25fr 1fr;
+  }
+}
+
+.final-cta-content {
+  padding: 48px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .final-cta-content {
+    padding: 64px 56px;
+  }
+}
+
+.final-cta-headline {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #FFFFFF;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  letter-spacing: -0.03em;
+}
+
+.final-cta-headline .serif-accent {
+  color: var(--color-accent);
+}
+
+.final-cta-sub {
+  font-size: clamp(1rem, 1.3vw, 1.1875rem);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+  margin-bottom: 36px;
+}
+
+.final-cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.final-cta-trust {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 500;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 20px;
+}
+
+.trust-icon {
+  color: var(--color-accent);
+  flex-shrink: 0;
+}
+
+/* Media Column */
+.final-cta-media {
+  position: relative;
+  min-height: 340px;
+  background-color: var(--color-navy);
+}
+
+.final-cta-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.final-media-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(8, 47, 61, 0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px 28px;
+  color: #FFFFFF;
+}
+
+.final-quote {
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  font-style: italic;
+  margin-bottom: 8px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.final-author {
+  font-size: 0.75rem;
+  color: var(--color-accent);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
