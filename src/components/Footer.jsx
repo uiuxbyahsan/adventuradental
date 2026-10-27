@@ -114,7 +114,7 @@ export default function Footer({ onOpenBooking }) {
               </li>
               <li>
                 <button type="button" className="footer-link-btn" onClick={() => handleNavClick('office')}>
-                  Office & Directions
+                  Find Us
                 </button>
               </li>
             </ul>

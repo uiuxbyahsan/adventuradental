@@ -131,7 +131,7 @@ export default function Header({ onOpenBooking }) {
               </li>
               <li>
                 <button type="button" className="nav-link" onClick={() => handleNavClick('office')}>
-                  Office & Hours
+                  Find Us
                 </button>
               </li>
             </ul>
@@ -193,7 +193,7 @@ export default function Header({ onOpenBooking }) {
                 <ArrowRight size={16} />
               </button>
               <button type="button" className="mobile-nav-link" onClick={() => handleNavClick('office')}>
-                <span>Location, Map & Hours</span>
+                <span>Find Us</span>
                 <ArrowRight size={16} />
               </button>
             </nav>
