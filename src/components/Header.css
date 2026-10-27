@@ -29,6 +29,23 @@
   gap: 6px;
 }
 
+.top-reviews-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.85);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  transition: color var(--transition-fast);
+}
+
+.top-reviews-btn:hover {
+  color: var(--color-accent);
+}
+
 .top-icon {
   color: var(--color-accent);
 }
@@ -74,57 +91,39 @@
   gap: 16px;
 }
 
-/* Brand Logo */
+/* Brand Logo — Clean Single Mark */
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 12px;
   flex-shrink: 0;
+  text-decoration: none;
 }
 
 .logo-img {
-  height: 44px;
+  height: 50px;
   width: auto;
+  max-width: 170px;
   object-fit: contain;
-  transition: transform var(--transition-fast);
+  display: block;
+  transition: transform var(--transition-fast), height var(--transition-fast);
 }
 
 .site-header.is-scrolled .logo-img {
-  height: 38px;
+  height: 42px;
 }
 
-.brand-text {
-  display: none;
-  flex-direction: column;
-}
-
-@media (min-width: 580px) {
-  .brand-text {
-    display: flex;
+@media (max-width: 580px) {
+  .logo-img {
+    height: 42px;
   }
 }
 
-.brand-title {
-  font-size: 1rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  color: var(--color-primary);
-  line-height: 1.1;
-}
-
-.brand-subtitle {
-  font-size: 0.625rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--color-accent);
-}
-
-/* Desktop Navigation */
+/* Desktop Navigation — Streamlined UX */
 .desktop-nav {
   display: none;
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 1024px) {
   .desktop-nav {
     display: block;
   }
@@ -253,7 +252,7 @@
   color: var(--color-accent);
 }
 
-@media (min-width: 1140px) {
+@media (min-width: 1024px) {
   .mobile-toggle {
     display: none;
   }

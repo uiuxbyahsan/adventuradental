@@ -69,10 +69,14 @@ export default function Header({ onOpenBooking }) {
               <MapPin size={13} className="top-icon" />
               <span>20475 Biscayne Blvd G-9, Aventura, FL</span>
             </span>
-            <span className="top-bar-item desktop-only">
+            <button 
+              type="button" 
+              className="top-bar-item desktop-only top-reviews-btn"
+              onClick={() => handleNavClick('reviews')}
+            >
               <ShieldCheck size={13} className="top-icon" />
               <span>4.9★ Rated · 795+ Verified Reviews</span>
-            </span>
+            </button>
           </div>
           <div className="top-bar-right">
             <a href={`tel:${PRACTICE_INFO.phoneRaw}`} className="top-phone-link">
@@ -86,22 +90,18 @@ export default function Header({ onOpenBooking }) {
       {/* Main Sticky Navigation */}
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
         <div className="container header-container">
-          {/* Logo on Left */}
-          <a href="#" className="brand-logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+          {/* Single Official Logo */}
+          <a href="#" className="brand-logo" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }} aria-label="Aventura Dental Group Home">
             <img 
               src="/assets/logo.webp" 
-              alt="Aventura Dental Group Logo" 
+              alt="Aventura Dental Group" 
               className="logo-img" 
               width="155" 
               height="58"
             />
-            <div className="brand-text">
-              <span className="brand-title">AVENTURA DENTAL</span>
-              <span className="brand-subtitle">GROUP · EST. 1985</span>
-            </div>
           </a>
 
-          {/* Desktop Navigation Links */}
+          {/* Desktop Navigation Links — Streamlined UX */}
           <nav className="desktop-nav" aria-label="Main Navigation">
             <ul className="nav-list">
               <li>
@@ -116,17 +116,12 @@ export default function Header({ onOpenBooking }) {
               </li>
               <li>
                 <button type="button" className="nav-link" onClick={() => handleNavClick('team')}>
-                  Our Team
+                  Doctors
                 </button>
               </li>
               <li>
                 <button type="button" className="nav-link" onClick={() => handleNavClick('reviews')}>
                   Reviews
-                </button>
-              </li>
-              <li>
-                <button type="button" className="nav-link" onClick={() => handleNavClick('resources')}>
-                  Resources
                 </button>
               </li>
               <li>
@@ -177,19 +172,15 @@ export default function Header({ onOpenBooking }) {
                 <ArrowRight size={16} />
               </button>
               <button type="button" className="mobile-nav-link" onClick={() => handleNavClick('before-after-gallery')}>
-                <span>Before & After Transformation Gallery</span>
+                <span>Before & After Gallery</span>
                 <ArrowRight size={16} />
               </button>
               <button type="button" className="mobile-nav-link" onClick={() => handleNavClick('team')}>
-                <span>Our Doctors & Team</span>
+                <span>Meet Our Doctors</span>
                 <ArrowRight size={16} />
               </button>
               <button type="button" className="mobile-nav-link" onClick={() => handleNavClick('reviews')}>
                 <span>Patient Reviews</span>
-                <ArrowRight size={16} />
-              </button>
-              <button type="button" className="mobile-nav-link" onClick={() => handleNavClick('resources')}>
-                <span>Patient Resources & Financing</span>
                 <ArrowRight size={16} />
               </button>
               <button type="button" className="mobile-nav-link" onClick={() => handleNavClick('office')}>
