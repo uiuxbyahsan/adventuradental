@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Calendar, Menu, X, ArrowRight, ShieldCheck, MapPin } from 'lucide-react';
+import { Phone, Calendar, Menu, X, ArrowRight } from 'lucide-react';
 import { PRACTICE_INFO } from '../data/practiceData';
 import './Header.css';
 
@@ -61,32 +61,6 @@ export default function Header({ onOpenBooking }) {
 
   return (
     <>
-      {/* Top Micro-Bar for Location & Contact */}
-      <div className="top-bar">
-        <div className="container top-bar-inner">
-          <div className="top-bar-left">
-            <span className="top-bar-item">
-              <MapPin size={13} className="top-icon" />
-              <span>20475 Biscayne Blvd G-9, Aventura, FL</span>
-            </span>
-            <button 
-              type="button" 
-              className="top-bar-item desktop-only top-reviews-btn"
-              onClick={() => handleNavClick('reviews')}
-            >
-              <ShieldCheck size={13} className="top-icon" />
-              <span>4.9★ Rated · 795+ Verified Reviews</span>
-            </button>
-          </div>
-          <div className="top-bar-right">
-            <a href={`tel:${PRACTICE_INFO.phoneRaw}`} className="top-phone-link">
-              <Phone size={13} className="top-icon" />
-              <span>Call: {PRACTICE_INFO.phone}</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Sticky Navigation */}
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
         <div className="container header-container">
