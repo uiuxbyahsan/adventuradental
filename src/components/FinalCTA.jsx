@@ -55,7 +55,7 @@ export default function FinalCTA({ onOpenBooking }) {
             {/* Media Image Column */}
             <div className="final-cta-media">
               <img
-                src="/assets/cases/case-veneers-1.webp"
+                src="/assets/gallery/gallery-veneers-fullmouth.webp"
                 alt="Aventura Dental Group Confident Smile Transformation"
                 className="final-cta-img"
                 loading="lazy"
