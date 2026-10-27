@@ -1,5 +1,5 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
-import { ArrowRight, CheckCircle2, SlidersHorizontal } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import './SignatureTreatment.css';
 
 export default function SignatureTreatment({ onOpenBooking }) {
@@ -86,21 +86,12 @@ export default function SignatureTreatment({ onOpenBooking }) {
                   <span className="sig-badge before-badge">BEFORE</span>
                 </div>
 
-                {/* Draggable Divider Handle */}
+                {/* Interactive Divider Line Only */}
                 <div 
                   className="sig-divider-line"
                   style={{ left: `${sliderPos}%` }}
-                >
-                  <div className="sig-handle-pill" aria-label="Slide to compare before and after">
-                    <span>◀▶</span>
-                  </div>
-                </div>
-
-                {/* Mobile Drag Hint */}
-                <div className="sig-drag-hint">
-                  <SlidersHorizontal size={13} />
-                  <span>Drag to compare</span>
-                </div>
+                  aria-hidden="true"
+                />
               </div>
             </div>
 
